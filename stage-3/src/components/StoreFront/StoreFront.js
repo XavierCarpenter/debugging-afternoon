@@ -7,6 +7,7 @@ class StoreFront extends Component {
 
     componentDidMount() {
         this.props.getAllProducts();
+        
     }
 
     render() {
@@ -31,6 +32,7 @@ class StoreFront extends Component {
 }
 
 function mapStateToProps(state) {
+   
     return {
         products: state.products,
         loading: state.loading,

@@ -4,8 +4,9 @@ import { removeFromShoppingCart } from '../../redux/reducer';
 import { connect } from 'react-redux';
 
 class ShoppingCart extends Component {
-
+    
     render() {
+        console.log(this.props);
         let shoppingCartDisplay = this.props.shoppingCart.map((element, index) => {
             return (
                 <div className="shopping-cart-product-container" key={index}>
@@ -37,4 +38,4 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps)(ShoppingCart);
+export default connect(mapStateToProps, {removeFromShoppingCart})(ShoppingCart);
